@@ -8,6 +8,8 @@ class home_page extends StatefulWidget{
   State<home_page> createState() => home_pageState();
 }
 class home_pageState extends State<home_page>{
+  final TextEditingController _textEditingController = TextEditingController();
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,7 +73,9 @@ class home_pageState extends State<home_page>{
                     ),
                   )
                 ],
-              )
+              ),
+              
+              
             ]
           ),
         )
