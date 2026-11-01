@@ -24,11 +24,58 @@ class home_pageState extends State<home_page>{
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 18
-              ),)
-            ],
+              )
+              ),
+              SizedBox(
+                height: 12,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: (){
+                        print("clicked the currency 1");
+                      },
+                      child: ListTile(
+                        leading: Container(
+                          height: 40,
+                          width: 40,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.lightBlue
+                          ),
+                        ),
+                        title: Text("currency"),
+                        subtitle: Text("country"),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () {
+                        print("clicked the currency 2");
+                      },
+                      child: ListTile(
+                        trailing: Container(
+                          height: 40,
+                          width: 40,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.lightBlue
+                          ),
+                        ),
+                        title: Text("currency"),
+                        subtitle: Text("country"),
+                      ),
+                    ),
+                  )
+                ],
+              )
+            ]
           ),
         )
-        ),
+        )
     );
   }
 }
