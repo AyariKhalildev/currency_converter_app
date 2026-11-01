@@ -16,7 +16,18 @@ class home_pageState extends State<home_page>{
         title: Text("currency converter app"),
       ),
       body: SafeArea(
-        child: Text("this is the home page")
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              Text("choose currencies to exchnange",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 18
+              ),)
+            ],
+          ),
+        )
         ),
     );
   }
