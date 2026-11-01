@@ -1,7 +1,6 @@
 
 
 
-
 class Currency {
   final String currency;
   final String country;

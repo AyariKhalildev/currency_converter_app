@@ -1,7 +1,9 @@
 
 
 
+import 'package:currency_converter_app/screens/choose_currency_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class home_page extends StatefulWidget{
   @override
@@ -37,7 +39,9 @@ class home_pageState extends State<home_page>{
                   Expanded(
                     child: GestureDetector(
                       onTap: (){
-                        print("clicked the currency 1");
+                        Navigator.push(context, 
+                        MaterialPageRoute(builder: (builder)=> ChooseCurrencyScreen())
+                        );
                       },
                       child: ListTile(
                         leading: Container(
@@ -56,7 +60,8 @@ class home_pageState extends State<home_page>{
                   Expanded(
                     child: GestureDetector(
                       onTap: () {
-                        print("clicked the currency 2");
+                        Navigator.push(context, 
+                        MaterialPageRoute(builder: (builder)=> ChooseCurrencyScreen()));
                       },
                       child: ListTile(
                         trailing: Container(
