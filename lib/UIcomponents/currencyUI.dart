@@ -19,12 +19,12 @@ class Currency_ui extends StatelessWidget {
           color: Colors.lightBlue
           ),
         ),
-      title: Text("currency",
+      title: Text(currency,
       style: TextStyle(
         fontWeight: FontWeight.bold
         ),
       ),
-      subtitle: Text("country"),
+      subtitle: Text(country),
     );
     
   }
