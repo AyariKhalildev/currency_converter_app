@@ -49,7 +49,8 @@ class home_pageState extends State<home_page>{
                   Expanded(
                     child: GestureDetector(
                       onTap: () {
-       
+                        Navigator.push(context, 
+                        MaterialPageRoute(builder: (builder) => ChooseCurrencyScreen()));
                       },
                       child: ListTile(
                       leading: ClipOval(
@@ -73,7 +74,8 @@ class home_pageState extends State<home_page>{
                   Expanded(
                     child: GestureDetector(
                       onTap: () {
-       
+                        Navigator.push(context, 
+                        MaterialPageRoute(builder: (builder) => ChooseCurrencyScreen()));
                       },
                       child: ListTile(
                       trailing: ClipOval(
