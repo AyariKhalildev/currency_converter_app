@@ -10,7 +10,8 @@ class home_page extends StatefulWidget{
   State<home_page> createState() => home_pageState();
 }
 class home_pageState extends State<home_page>{
-  final TextEditingController _textEditingController = TextEditingController();
+  final TextEditingController _firstAmountController = TextEditingController();
+  final TextEditingController _secondAmountController = TextEditingController();
   String? _firstCurrency;
   String? _secondCurrency;
   Position? _userLocation;
@@ -122,12 +123,56 @@ class home_pageState extends State<home_page>{
                   )
                 ],
               ),
+              Row(
+                children: [
+                  Expanded(
+                    child: TextField(
+                      controller: _firstAmountController,
+                      keyboardType: const TextInputType.numberWithOptions(decimal: true),
+                      decoration: InputDecoration(
+                        
+                        border: const OutlineInputBorder(),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  GestureDetector(
+                    onTap: () {
+                      print("exchanging the currencies");
+                    },
+                    child: Container(
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.amber
+                      ),
+                      child: Icon(
+                        Icons.currency_exchange
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: TextField(
+                      controller: _secondAmountController,
+                      keyboardType: const TextInputType.numberWithOptions(decimal: true),
+                      decoration: InputDecoration(
+                        border: const OutlineInputBorder(),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
               
               
-            ]
+              ],
+            ),
+              
+            
           ),
         )
-        )
-    );
+        );
+    
   }
 }
